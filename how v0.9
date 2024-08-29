@@ -1,0 +1,1367 @@
+[33mcommit d85719c936d9dc49202455d30674a5bccdac779c[m[33m ([m[1;33mtag: [m[1;33mv0.9[m[33m)[m
+Author: Yu <Yu2841003086@outlook.com>
+Date:   Wed Aug 28 11:03:59 2024 +0800
+
+    test
+
+[1mdiff --git a/hello.py b/hello.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d82e48e[m
+[1m--- /dev/null[m
+[1m+++ b/hello.py[m
+[36m@@ -0,0 +1,1345 @@[m
+[32m+[m[32m# encoding: utf-8[m
+[32m+[m[32m# module _ast[m
+[32m+[m[32m# from (built-in)[m
+[32m+[m[32m# by generator 1.147[m
+[32m+[m[32m# no doc[m
+[32m+[m[32m# no imports[m
+[32m+[m
+[32m+[m[32m# Variables with simple values[m
+[32m+[m
+[32m+[m[32mPyCF_ALLOW_TOP_LEVEL_AWAIT = 8192[m
+[32m+[m
+[32m+[m[32mPyCF_ONLY_AST = 1024[m
+[32m+[m
+[32m+[m[32mPyCF_TYPE_COMMENTS = 4096[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# no functions[m
+[32m+[m[32m# classes[m
+[32m+[m
+[32m+[m[32mclass AST(object):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __delattr__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Implement delattr(self, name). """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def __getattribute__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Return getattr(self, name). """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @staticmethod  # known case of __new__[m
+[32m+[m[32m    def __new__(*args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Create and return a new object.  See help(type) for accurate signature. """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def __reduce__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def __setattr__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Implement setattr(self, name, value). """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m[32m    __dict__ = None  # (!) real value is "mappingproxy({'__getattribute__': <slot wrapper '__getattribute__' of '_ast.AST' objects>, '__setattr__': <slot wrapper '__setattr__' of '_ast.AST' objects>, '__delattr__': <slot wrapper '__delattr__' of '_ast.AST' objects>, '__init__': <slot wrapper '__init__' of '_ast.AST' objects>, '__new__': <built-in method __new__ of type object at 0x00007FFE9BD91E50>, '__reduce__': <method '__reduce__' of '_ast.AST' objects>, '__dict__': <attribute '__dict__' of '_ast.AST' objects>, '__doc__': None, '_fields': (), '_attributes': ()})"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass operator(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Add(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass alias(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'name',[m
+[32m+[m[32m        'asname',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass boolop(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass And(boolop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass stmt(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ([m
+[32m+[m[32m        'lineno',[m
+[32m+[m[32m        'col_offset',[m
+[32m+[m[32m        'end_lineno',[m
+[32m+[m[32m        'end_col_offset',[m
+[32m+[m[32m    )[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AnnAssign(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'annotation',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'simple',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass arg(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ([m
+[32m+[m[32m        'lineno',[m
+[32m+[m[32m        'col_offset',[m
+[32m+[m[32m        'end_lineno',[m
+[32m+[m[32m        'end_col_offset',[m
+[32m+[m[32m    )[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'arg',[m
+[32m+[m[32m        'annotation',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass arguments(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'posonlyargs',[m
+[32m+[m[32m        'args',[m
+[32m+[m[32m        'vararg',[m
+[32m+[m[32m        'kwonlyargs',[m
+[32m+[m[32m        'kw_defaults',[m
+[32m+[m[32m        'kwarg',[m
+[32m+[m[32m        'defaults',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Assert(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'test',[m
+[32m+[m[32m        'msg',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Assign(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'targets',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AsyncFor(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'iter',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AsyncFunctionDef(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'name',[m
+[32m+[m[32m        'args',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'decorator_list',[m
+[32m+[m[32m        'returns',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AsyncWith(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'items',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass expr(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ([m
+[32m+[m[32m        'lineno',[m
+[32m+[m[32m        'col_offset',[m
+[32m+[m[32m        'end_lineno',[m
+[32m+[m[32m        'end_col_offset',[m
+[32m+[m[32m    )[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Attribute(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'attr',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AugAssign(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'op',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass expr_context(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AugLoad(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass AugStore(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Await(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BinOp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'left',[m
+[32m+[m[32m        'op',[m
+[32m+[m[32m        'right',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BitAnd(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BitOr(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BitXor(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass BoolOp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'op',[m
+[32m+[m[32m        'values',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Break(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Call(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'func',[m
+[32m+[m[32m        'args',[m
+[32m+[m[32m        'keywords',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ClassDef(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'name',[m
+[32m+[m[32m        'bases',[m
+[32m+[m[32m        'keywords',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'decorator_list',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass cmpop(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Compare(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'left',[m
+[32m+[m[32m        'ops',[m
+[32m+[m[32m        'comparators',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass comprehension(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'iter',[m
+[32m+[m[32m        'ifs',[m
+[32m+[m[32m        'is_async',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Constant(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    n = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m
+[32m+[m[32m    s = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'kind',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Continue(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Del(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Delete(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'targets',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Dict(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'keys',[m
+[32m+[m[32m        'values',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass DictComp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'key',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'generators',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Div(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Eq(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass excepthandler(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ([m
+[32m+[m[32m        'lineno',[m
+[32m+[m[32m        'col_offset',[m
+[32m+[m[32m        'end_lineno',[m
+[32m+[m[32m        'end_col_offset',[m
+[32m+[m[32m    )[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ExceptHandler(excepthandler):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'type',[m
+[32m+[m[32m        'name',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Expr(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass mod(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Expression(mod):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'body',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass slice(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ExtSlice(slice):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'dims',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass FloorDiv(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass For(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'iter',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass FormattedValue(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'conversion',[m
+[32m+[m[32m        'format_spec',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass FunctionDef(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'name',[m
+[32m+[m[32m        'args',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'decorator_list',[m
+[32m+[m[32m        'returns',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass FunctionType(mod):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'argtypes',[m
+[32m+[m[32m        'returns',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass GeneratorExp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elt',[m
+[32m+[m[32m        'generators',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Global(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'names',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Gt(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass GtE(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass If(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'test',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass IfExp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'test',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Import(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'names',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ImportFrom(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'module',[m
+[32m+[m[32m        'names',[m
+[32m+[m[32m        'level',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass In(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Index(slice):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Interactive(mod):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'body',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass unaryop(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Invert(unaryop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Is(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass IsNot(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass JoinedStr(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'values',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass keyword(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'arg',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Lambda(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'args',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass List(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elts',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ListComp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elt',[m
+[32m+[m[32m        'generators',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Load(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass LShift(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Lt(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass LtE(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass MatMult(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Mod(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Module(mod):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'type_ignores',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Mult(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Name(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'id',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass NamedExpr(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'target',[m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Nonlocal(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'names',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Not(unaryop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass NotEq(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass NotIn(cmpop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Or(boolop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Param(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Pass(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Pow(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Raise(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'exc',[m
+[32m+[m[32m        'cause',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Return(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass RShift(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Set(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elts',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass SetComp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elt',[m
+[32m+[m[32m        'generators',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Slice(slice):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'lower',[m
+[32m+[m[32m        'upper',[m
+[32m+[m[32m        'step',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Starred(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Store(expr_context):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Sub(operator):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Subscript(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m        'slice',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Suite(mod):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'body',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Try(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'handlers',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m        'finalbody',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Tuple(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'elts',[m
+[32m+[m[32m        'ctx',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass type_ignore(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass TypeIgnore(type_ignore):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'lineno',[m
+[32m+[m[32m        'tag',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass UAdd(unaryop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass UnaryOp(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'op',[m
+[32m+[m[32m        'operand',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass USub(unaryop):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ()[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass While(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'test',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'orelse',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass With(stmt):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'items',[m
+[32m+[m[32m        'body',[m
+[32m+[m[32m        'type_comment',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass withitem(AST):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    _attributes = ()[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'context_expr',[m
+[32m+[m[32m        'optional_vars',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Yield(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass YieldFrom(expr):[m
+[32m+[m[32m    # no doc[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    _fields = ([m
+[32m+[m[32m        'value',[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass __loader__(object):[m
+[32m+[m[32m    """[m
+[32m+[m[32m    Meta path import for built-in modules.[m
+[32m+[m
+[32m+[m[32m        All methods are either class or static methods to avoid the need to[m
+[32m+[m[32m        instantiate the class.[m
+[32m+[m[32m    """[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def create_module(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Create a built-in module """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def exec_module(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Exec a built-in module """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def find_module(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """[m
+[32m+[m[32m        Find the built-in module.[m
+[32m+[m
+[32m+[m[32m                If 'path' is ever specified then the search is considered a failure.[m
+[32m+[m
+[32m+[m[32m                This method is deprecated.  Use find_spec() instead.[m
+[32m+[m[32m        """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def find_spec(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def get_code(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Return None as built-in modules do not have code objects. """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def get_source(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Return None as built-in modules do not have source code. """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def is_package(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """ Return False as built-in modules are never packages. """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    @classmethod[m
+[32m+[m[32m    def load_module(cls, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        """[m
+[32m+[m[32m        Load the specified module into sys.modules and return it.[m
+[32m+[m
+[32m+[m[32m            This method is deprecated.  Use loader.exec_module instead.[m
+[32m+[m[32m        """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def module_repr(module):  # reliably restored by inspect[m
+[32m+[m[32m        """[m
+[32m+[m[32m        Return repr for the module.[m
+[32m+[m
+[32m+[m[32m                The method is deprecated.  The import machinery does the job itself.[m
+[32m+[m[32m        """[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    def __init__(self, *args, **kwargs):  # real signature unknown[m
+[32m+[m[32m        pass[m
+[32m+[m
+[32m+[m[32m    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default[m
+[32m+[m[32m    """list of weak references to the object (if defined)"""[m
+[32m+[m
+[32m+[m[32m    __dict__ = None  # (!) real value is "mappingproxy({'__module__': '_frozen_importlib', '__doc__': 'Meta path import for built-in modules.\\n\\n    All methods are either class or static methods to avoid the need to\\n    instantiate the class.\\n\\n    ', 'module_repr': <staticmethod object at 0x0000027189FC3460>, 'find_spec': <classmethod object at 0x0000027189FC3490>, 'find_module': <classmethod object at 0x0000027189FC34C0>, 'create_module': <classmethod object at 0x0000027189FC34F0>, 'exec_module': <classmethod object at 0x0000027189FC3520>, 'get_code': <classmethod object at 0x0000027189FC35B0>, 'get_source': <classmethod object at 0x0000027189FC3640>, 'is_package': <classmethod object at 0x0000027189FC36D0>, 'load_module': <classmethod object at 0x0000027189FC3700>, '__dict__': <attribute '__dict__' of 'BuiltinImporter' objects>, '__weakref__': <attribute '__weakref__' of 'BuiltinImporter' objects>})"[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# variables with complex values[m
+[32m+[m
+[32m+[m[32m__spec__ = None  # (!) real value is "ModuleSpec(name='_ast', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in')"[m
+[32m+[m
+[1mdiff --git a/readme.txt b/readme.txt[m
+[1mindex 89e04a1..98c0370 100644[m
+[1m--- a/readme.txt[m
+[1m+++ b/readme.txt[m
+[36m@@ -4,3 +4,4 @@[m [mGit has a mutable index called stage.[m
+ Git tracks changes of files.[m
+ Creating a new branch is quick and simple[m
+ i like you[m
+[32m+[m[32myou likely me[m
+\ No newline at end of file[m
